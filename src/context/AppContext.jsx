@@ -12,10 +12,8 @@ const AppProvider = ({ children }) => {
 
   const isAdmin = () => {
     const user = JSON.parse(localStorage.getItem("user"));
-    return user && user?.email === "ashutoshkaushal2@gmail.com";
+    return user && user?.email === "admin@test.com";
   };
-
-
 
   return (
     <AppContext.Provider value={{ isAuthenticated, isAdmin }}>
