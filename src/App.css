@@ -1,0 +1,16 @@
+.wrapper-class {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.375rem;
+}
+.editor-class {
+  background-color: lightgray;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.375rem;
+  height: 100%;
+}
+.toolbar-class {
+  border: 1px solid #ccc;
+  border-radius: 0.375rem;
+}
