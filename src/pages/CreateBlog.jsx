@@ -8,7 +8,6 @@ const CreateBlog = () => {
   const [formData, setFormData] = useState({});
   const [formType, setFormType] = useState("guide");
 
-
   const handleCoverImageChange = (e) => {
     setCoverImage(e.target.files[0]);
   };
@@ -33,7 +32,7 @@ const CreateBlog = () => {
       .from(formType === "guide" ? "blogs" : "services")
       .insert([{ ...formData, slug: convertToSlug(formData?.title) }])
       .select();
-   
+
     if (!error) {
       setStatus("SUCCESS");
       setFormData({});
@@ -109,7 +108,7 @@ const CreateBlog = () => {
             </div>
           </div>
         )}
-        <div className="col-span-1 md:col-span-1">
+        <div className="col-span-2 md:col-span-1">
           <label className="block text-sm font-medium text-gray-700">
             Title
           </label>
@@ -122,7 +121,7 @@ const CreateBlog = () => {
             required
           />
         </div>{" "}
-        <div className="col-span-1 md:col-span-1 ">
+        <div className="col-span-2 md:col-span-1 ">
           <label className="block text-sm font-medium text-gray-700">
             Cover Image
           </label>
@@ -133,7 +132,7 @@ const CreateBlog = () => {
             className=" block bg-slate-200 w-full  rounded-md text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-primary file:text-white hover:file:bg-primary-dark cursor-pointer"
           />
         </div>
-        <div className="col-span-1 md:col-span-1">
+        <div className="col-span-2 md:col-span-1">
           <label className="block text-sm font-medium text-gray-700">
             Sub Title
           </label>
@@ -159,7 +158,7 @@ const CreateBlog = () => {
             required
           />
         </div>
-        <div>
+        <div className="col-span-2 md:col-span-1  ">
           <label className="block text-sm font-medium text-gray-700">
             Categories
           </label>
@@ -172,7 +171,7 @@ const CreateBlog = () => {
             required
           />
         </div>
-        <div className="col-span-1 md:col-span-1  ">
+        <div className="col-span-2 md:col-span-1  ">
           <label className="block text-sm font-medium text-gray-700">
             Tags
           </label>
